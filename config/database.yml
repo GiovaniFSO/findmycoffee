@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgis
+  encoding: unicode
+  pool: 5
+  host: 127.0.0.1
+  port: 5432
+  username: postgres
+  password: postgres
+
+development:
+  <<: *default
+  database: find_my_coffee_api_development
+
+test:
+  <<: *default
+  database: find_my_coffee_api_test
+
+production:
+  <<: *default
+  database: find_my_coffee_api_production
